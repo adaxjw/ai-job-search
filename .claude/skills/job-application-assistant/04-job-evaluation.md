@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Corporate/regional strategy, GTM strategy and execution, business transformation, C-suite and executive committee advisory, EV/mobility strategy, sustainability strategy, pricing and packaging, cross-entity/JV alignment, AI-enabled GTM
+**Moderate match areas:** Program/product management, innovation incubation and scaling, general management exposure (without formal P&L title), Python/SAP-adjacent technical fluency
+**Weak match areas:** Hands-on technical/engineering execution roles (software development, data engineering), roles requiring an already-held formal P&L or general-management title
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Corporate strategy, GTM, C-suite/executive committee advisory (consulting, global automotive, AI-driven knowledge business sectors)
+**Moderate:** General management / P&L ownership — has led $180M+ delivery scope and driven commercial performance, but has not yet held a formal P&L or general-management title
+**Entry-level:** N/A
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -47,10 +47,11 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
+- Within commute range, or relocation to HK / EU / UK / US / AU / SG: PASS
+- Remote with occasional office: PASS, but flag if the role is structurally isolated from where decisions get made (see below)
+- Requires relocation outside HK / EU / UK / US / AU / SG: FAIL (deal-breaker), unless the user says otherwise
 - Frequent international travel: FLAG (discuss with user)
+- **Structurally isolated roles** (physically local but organizationally remote from the decision-making centre — e.g., a satellite office with no path to leadership access): FAIL/FLAG even if geographically convenient. This is a deal-breaker independent of commute distance.
 
 ### 5. Career Alignment & Motivation (0-100)
 Does this role advance career goals and contain tasks that energize?
@@ -63,19 +64,20 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Move from advisory scope into a role with real decision rights and design authority, not pure advisory/execution
+- Secure a seat at the leadership table with active sponsorship from senior leadership
+- Build toward eventual formal P&L or general-management ownership (current delivery scope — $180M+ renewal base, ~$30M portfolio — should be reframed as commercial accountability, not just delivery, to help close this gap)
+- Build commercial credibility in salaried roles as a stepping stone toward an eventual independent well-being/lifestyle venture
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+- Tasks that energize: ambiguous 0-to-1 strategy work, cross-border/cross-cultural bridging, AI-enabled GTM, sustainability strategy design, building things from scratch
+- Tasks that drain: pure execution with no design authority, rigid process/hierarchy-bound work, structurally isolated roles (remote from the decision-making centre)
+- Non-task factors: active executive sponsorship, genuine decision rights, fast-moving/innovation-friendly culture over rigid hierarchy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Currently employed (Elsevier); can afford to be selective rather than taking the first offer
+- **Flexibility**: Open to relocation across HK / EU / UK / US / AU / SG
+- **Professional development**: Prioritizes roles that build commercial/P&L credibility toward a long-term independent venture, over roles that are a lateral or backward step in decision authority
 
 ### 6. Salary Benchmark (Optional)
 
