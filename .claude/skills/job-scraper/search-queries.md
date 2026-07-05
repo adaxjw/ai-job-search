@@ -76,7 +76,7 @@ Sector-agnostic, multi-region search. Substitute `<region>` above with each of:
 
 ## Compensation Baseline
 
-Negotiable; minimum ~1,000,000 (currency to be confirmed - Ada, please confirm HKD / CNY / USD) base plus bonus and a relocation package for roles outside her current city. Use this only as a soft screen - do not reject a strong-fit role over compensation before discussing with Ada.
+Negotiable; minimum ~HKD 1,000,000 base plus bonus and a relocation package for roles outside her current city. Use this only as a soft screen - do not reject a strong-fit role over compensation before discussing with Ada.
 
 ## Date Filter
 

@@ -82,7 +82,7 @@ Sector-agnostic by design - Ada is filtering primarily by role/fit criteria (see
 - Relocation outside HK / EU / UK / US / AU / SG
 
 ### Compensation Baseline
-Negotiable; minimum ~1,000,000 (currency to be confirmed - HKD / CNY / USD) base plus bonus, plus a relocation package for roles outside the current city. Soft screen only - do not rule out an otherwise strong-fit role on compensation alone without checking with Ada first.
+Negotiable; minimum ~HKD 1,000,000 base plus bonus, plus a relocation package for roles outside the current city. Soft screen only - do not rule out an otherwise strong-fit role on compensation alone without checking with Ada first.
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
