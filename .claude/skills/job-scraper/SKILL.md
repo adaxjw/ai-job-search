@@ -45,7 +45,7 @@ If the user specifies a narrower focus area in the invocation (e.g. "/scrape sus
 For each search:
 - Use `WebSearch` with site-specific queries (jobindex.dk, linkedin.com/jobs, karriere.dk, etc.)
 - Target your configured geographic area
-- Look for postings from the last 14 days as an initial pre-filter - this is a loose net, not the final validation. Final inclusion in results is gated by Step 2.5's 30-day check, which requires actual confirmed evidence, not just an initial guess.
+- Look for postings from the last 14 days as an initial pre-filter - this is a loose net, not the final validation. Final inclusion in results is gated by Step 2.5's cutoff-date check, which requires actual confirmed evidence, not just an initial guess.
 
 ### Step 2: Fetch & Parse
 
@@ -57,16 +57,18 @@ For each promising result from Step 1:
 
 ### Step 2.5: Validate Posting Date & Link (HARD GATE - house rule, locked)
 
-**This is a hard filter, not a soft flag.** A job with no confirmed posting date within the last 30 days does not appear in Step 5's results table. Do not show it "with a caveat" - exclude it. This rule exists because three separate incidents got past a softer version of this check: an HSBC posting ~4 years expired, an Airwallex posting ~3 years stale, and a Fidelity International posting ~1 year old and closed - all initially presented as live matches.
+**Cutoff date: 2026-05-01.** Only postings confirmable as posted on or after this date qualify. This replaced a rolling "last 30 days" window on 2026-07-05 after that window returned zero results across two full search rounds spanning 15+ companies - a fixed, slightly wider cutoff gives the search more room to find real matches without reopening the door to stale listings. **This cutoff is a snapshot, not a permanent constant** - it will itself go stale as time passes. Re-confirm it with the user roughly every few weeks (e.g., "should I move the cutoff forward from May 1?") rather than silently letting it drift further behind the current date, and update this line when they do.
+
+**This is a hard filter, not a soft flag.** A job with no confirmed posting date on or after the cutoff does not appear in Step 5's results table. Do not show it "with a caveat" - exclude it. This rule exists because three separate incidents got past a softer version of this check: an HSBC posting ~4 years expired, an Airwallex posting ~3 years stale, and a Fidelity International posting ~1 year old and closed - all initially presented as live matches.
 
 **Calibration note:** LinkedIn job IDs are a weak, unreliable signal of recency (they are global and sequential across all LinkedIn postings, not per-market), but as data points accumulate they're useful for sanity-checking: as of 2026-07, an ID around ~4.24 billion (e.g. `4242593394`) was already confirmed ~1 year stale. Treat ID magnitude only as a rough prior, never as confirmation - always require actual date evidence per below.
 
 1. **Prefer the company's own careers page / ATS** (Greenhouse, Ashby, Lever, Workday, or the company's own `careers.<company>.com`) over a job-board mirror (LinkedIn, Indeed, Jobsdb, Glassdoor, etc.) whenever both exist for the same role. Company ATS pages are far more likely to reflect true current state and are occasionally fetchable when the board mirror is not.
-2. **Require positive date evidence, not absence of evidence to the contrary.** Acceptable evidence: an explicit relative-date string ("Posted 3 days ago", "2w ago", "Xh"), an explicit calendar date attached to the specific listing (not an aggregator's "as of [date]" scrape timestamp), or a successful `WebFetch` of the canonical page showing the listing is current. Try `WebFetch` on the canonical URL first; if blocked (expect frequent 403s in this environment), fall back to `WebSearch` queries that combine the company + exact title + terms like "posted" / "ago" / "new" to try to surface a dated snippet.
+2. **Require positive date evidence, not absence of evidence to the contrary.** Acceptable evidence: an explicit relative-date string ("Posted 3 days ago", "2w ago", "Xh") that resolves to on/after the cutoff, an explicit calendar date attached to the specific listing (not an aggregator's "as of [date]" scrape timestamp) that is on/after the cutoff, or a successful `WebFetch` of the canonical page showing the listing is current. Try `WebFetch` on the canonical URL first; if blocked (expect frequent 403s in this environment), fall back to `WebSearch` queries that combine the company + exact title + terms like "posted" / "ago" / "new" to try to surface a dated snippet.
 3. **If multiple job-board IDs exist for what looks like the same underlying role** (common - the same req gets re-crawled and re-indexed under new IDs over time), do not assume the newest-looking ID is current just because the number is larger. Treat all of them as unconfirmed until one produces real date evidence.
-4. **No confirmed date within 30 days -> exclude from Step 5 entirely.** Record it in `seen_jobs.json` with `status: "excluded_unverified"` (not `"new"`) so it isn't re-fetched and re-attempted every run, but do not put it in the user-facing results table. It's fine - expected, even - for a run to surface fewer results, or zero, rather than presenting unverified listings.
+4. **No confirmed date on/after the cutoff -> exclude from Step 5 entirely.** Record it in `seen_jobs.json` with `status: "excluded_unverified"` (not `"new"`) so it isn't re-fetched and re-attempted every run, but do not put it in the user-facing results table. It's fine - expected, even - for a run to surface fewer results, or zero, rather than presenting unverified listings.
 5. **Never present a job whose only evidence is an aggregator category page** (e.g. "1,000+ jobs in Singapore") as an individual match - that is not a specific posting and never will be, regardless of date.
-6. **Re-validate on every resurfacing, not just first discovery.** If a job already in `seen_jobs.json` is being resurfaced in a later `/scrape` run or handed to `/apply`, re-run this check - a listing confirmed fresh two weeks ago may be stale now.
+6. **Re-validate on every resurfacing, not just first discovery.** If a job already in `seen_jobs.json` is being resurfaced in a later `/scrape` run or handed to `/apply`, re-run this check - a listing confirmed fresh two weeks ago may be stale now, and a listing previously excluded may now qualify if the cutoff has moved forward.
 7. If the user wants to see the excluded/unverified candidates anyway (e.g. to manually check a promising lead), that's fine to share on request - just never put them in the default results table unlabeled as validated.
 
 ### Step 3: Quick Fit Assessment
@@ -103,7 +105,7 @@ Present new jobs in a table sorted by fit (high first):
 ```
 ## New Job Matches - YYYY-MM-DD
 
-Found X positions confirmed posted within the last 30 days (Y high, Z medium, W low match).
+Found X positions confirmed posted on or after the cutoff date (currently 2026-05-01) (Y high, Z medium, W low match).
 [If applicable: Also found N candidates that could not be date-verified and were excluded - available on request.]
 
 | # | Fit | Title | Company | Location | Confirmed Posted | Original Link |
@@ -138,6 +140,6 @@ If the user decides to apply to any job, add a row to `job_search_tracker.csv`.
 4. **Only open positions.** Skip postings with expired deadlines or those marked as closed.
 5. **Be efficient with WebFetch.** Don't fetch every search result - use titles and snippets to pre-filter before fetching.
 6. **Parallel searches.** Use the Agent tool or parallel WebSearch calls to speed up the search phase.
-7. **30-day validation is a hard gate, locked house rule (see Step 2.5).** A job without confirmed positive date evidence within the last 30 days is excluded from results entirely - not shown with a caveat, not shown as "needs_verification." A run that surfaces zero validated jobs is an acceptable, expected outcome in an environment where WebFetch is frequently blocked; it is never acceptable to present an unverified listing as if it were confirmed.
+7. **Cutoff-date validation is a hard gate, locked house rule (see Step 2.5).** Currently: posted on or after 2026-05-01 (updated from a rolling 30-day window on 2026-07-05; re-confirm with the user periodically and update this cutoff when they move it forward). A job without confirmed positive date evidence on/after the cutoff is excluded from results entirely - not shown with a caveat, not shown as "needs_verification." A run that surfaces zero validated jobs is an acceptable, expected outcome in an environment where WebFetch is frequently blocked; it is never acceptable to present an unverified listing as if it were confirmed.
 8. **Always show the original link.** Every result the user sees must include the exact canonical URL used to validate it, not a generic search or category page.
 9. **Always cover all five tracked focus areas every run (locked house rule, see Step 1).** Strategy, chief of staff, GTM, sustainability, corporate development - run Priority 1-3 from `search-queries.md` every time, not a narrowed "top 3" subset.
