@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Ada Xinjia Wang
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Ada, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,68 +10,79 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
-
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Ada Xinjia Wang
+- **Location:** Beijing, China (Hong Kong citizen); open to relocation: HK / EU / UK / US / AU / SG
+- **Languages:** Mandarin (Native), English (Bilingual), French (B1), German (Beginner), Cantonese (conversational)
+- **Status:** Employed (Senior Manager, Strategy & GTM, RELX Group/Elsevier)
+- **LinkedIn headline:** "Strategy & Transformation Leader | GTM, Cross-border growth | Ex-Volkswagen, Audi, Daimler, EY | MSc, MBA"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **M.B.A. in Finance and Strategy** (2018-2020) - HEC Paris, Paris, France
+  - GPA 3.8/4, Global Ambassador, Alumni Interviewer
+- **M.Sc. in Software Engineering** (2010-2013) - BUAA (Beihang University), Beijing, China
+  - GPA 3.9/4
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Senior Manager, Strategy & GTM (Greater China)** (2025.02 - Present) - **RELX Group, Elsevier** (Beijing)
+  - Lead strategy and GTM execution across a $180M+ renewal base and ~$30M solutions portfolio
+  - Lead Elsevier's largest AI-assisted workspace GTM in the region
+  - Manage strategic partnerships strengthening long-term market positioning
+- **Senior Manager, Corporate Strategy (CEO Office)** (2022.10 - 2024.06) - **Volkswagen Group China** (Beijing / Wolfsburg)
+  - Advised CEO and executive committee on Group regional strategy and transformation
+  - Delivered 37% cost optimization through commercial and operational initiatives
+  - Led the first China Sustainability Strategy design and execution
+- **Manager, Product Strategy & Portfolio** (2020.10 - 2022.10) - **Audi AG** (Beijing / Munich)
+  - Led EV portfolio strategy for China, aligning global roadmap with local market dynamics
+  - Built China Innovation Incubator, scaling 15 concepts toward commercialization
+- **Autonomous Mobility Strategist (MBA Internship)** (2019) - **Daimler AG** (Stuttgart)
+  - Designed commercial strategy for global autonomous mobility expansion
+- **Engagement Manager, Strategy** (2013 - 2018) - **EY Consulting** (Stuttgart / Beijing)
+  - Promoted from Senior Consultant, Strategy (2013-2016) to Engagement Manager, Strategy (2016-2018)
+  - Managed ~$10M client revenue portfolio; mentored 20+ consultants
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Corporate & regional strategy, GTM strategy and execution, C-suite/executive committee advisory
+- **Secondary:** EV/mobility strategy, sustainability strategy, pricing & packaging, AI-enabled GTM, cross-entity/JV alignment
+- **Domain:** Global automotive, AI-driven knowledge/publishing, cross-border China-global bridge
+- **Software:** SAP ERP, Python (basics)
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **LVMH Excellence in Client Experience** - completed 2019
+- **Lean Six Sigma Green Belt** - completed 2018
+- **CISA** - completed 2013
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+None.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- Top performer - Volkswagen Group China (2022, 2023)
+- Top performer - Audi AG (2020, 2021)
+- Top performer - EY Consulting (2013-2018)
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+<!-- Hogan-informed, self-reported -->
+- **High Ambition + Low Power/Status Drive** - driven to achieve and grow, not motivated by hierarchy or title for its own sake
+- **High Curiosity/Learning + Low Process Orientation** - thrives in ambiguous, fast-changing, innovation-friendly environments over rigid process/hierarchy
+- **Strengths:** comfort with ambiguity, building initiatives from scratch, cross-border/cross-cultural bridging
+- **Growth areas:** low process orientation - frame as building structure only when it adds value (e.g., the VW 37% cost optimization)
+- **Thrives in:** fast-changing, ambiguous, innovation-friendly environments with active sponsorship and real decision rights
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Building things that are thoughtful, enduring, and human
+- Ambiguous 0-to-1 strategy work and cross-border/cross-cultural bridging
+- AI-enabled GTM and agentic AI that removes structural bottlenecks in a system
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+Sector-agnostic by design - Ada is filtering primarily by role/fit criteria (see Deal-breakers and `04-job-evaluation.md`), not by industry. Background-adjacent sectors worth prioritizing in searches: global automotive & mobility (EV), AI-driven knowledge/publishing platforms, sustainability/impact, and management consulting - but a strong-fit role in any sector should surface.
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Structurally isolated roles: physically local but organizationally remote from the decision-making centre, with no path to leadership access
+- Pure-execution scope with no design authority
+- Relocation outside HK / EU / UK / US / AU / SG
+
+### Compensation Baseline
+Negotiable; minimum ~HKD 1,000,000 base plus bonus, plus a relocation package for roles outside the current city. Soft screen only - do not rule out an otherwise strong-fit role on compensation alone without checking with Ada first.
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

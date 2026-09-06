@@ -1,70 +1,82 @@
 # Search Queries for Job Scraper
 
-<!-- SETUP: Customize these queries based on your skills, target roles, and location -->
+Ada's search is multi-region (HK / EU / UK / US / AU / SG) and sector-agnostic — she is
+filtering by role, seniority, and fit criteria (see `04-job-evaluation.md`), not by
+industry. The Danish CLI tools in `.agents/skills/` do not apply here.
 
-## Search Sites
+## Search Tools
 
-Primary (Danish job market):
-- **jobindex.dk** - largest Danish job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: Denmark / your city)
-- **karriere.dk** - IDA's job board (engineering/science roles)
-- **jobfinder.dk** - another major Danish job board
-- **akademikernes.dk** - academic union job board
+Primary:
+- **`linkedin-search`** (`.agents/skills/linkedin-search/`) - country-agnostic LinkedIn job search CLI. Pass `--location` per region below and `--query` per role title. Personal use only, keep volume low.
+- **Targeted WebSearch** - `site:linkedin.com/jobs`, `site:` company career pages, and general searches for named companies/sectors.
 
-Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies
+Secondary:
+- Direct Google/WebSearch queries with `site:` filters for specific target companies as they come up.
 
 ## Query Categories
 
-Queries are grouped by priority. Each query should be combined with your location terms (e.g. "Copenhagen", "Sjælland", "Hovedstaden") where the site supports it.
+Queries are grouped by priority. Combine each role title with the region locations under "Location Filter" below - run the linkedin-search CLI once per region per priority-1/2 title, and use WebSearch for the rest.
 
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
+### Priority 1: Primary Target Roles (sector-agnostic)
 
-These match your strongest and most desired career direction.
-
-```
-site:jobindex.dk "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_CITY]
-site:jobindex.dk "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_COUNTRY]
-```
-
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
-
-These match your domain expertise.
+Strongest and most desired career direction - run across all regions.
 
 ```
-site:jobindex.dk [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:jobindex.dk [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
+bun run skills/linkedin-search/cli/src/cli.ts search -q "Director of Strategy" -l "<region>" --jobage 14 --format table
+bun run skills/linkedin-search/cli/src/cli.ts search -q "Head of Strategy" -l "<region>" --jobage 14 --format table
+bun run skills/linkedin-search/cli/src/cli.ts search -q "VP Strategy & Transformation" -l "<region>" --jobage 14 --format table
+bun run skills/linkedin-search/cli/src/cli.ts search -q "Chief of Staff" -l "<region>" --jobage 14 --format table
+bun run skills/linkedin-search/cli/src/cli.ts search -q "Director of Corporate Strategy" -l "<region>" --jobage 14 --format table
+bun run skills/linkedin-search/cli/src/cli.ts search -q "Head of Corporate Strategy" -l "<region>" --jobage 14 --format table
+site:linkedin.com/jobs "Chief of Staff" OR "VP Strategy" <region>
 ```
 
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
+### Priority 2: Domain Expertise (GTM, EV/mobility, sustainability, AI-enabled GTM)
 
-Adjacent roles you could pivot into.
-
-```
-site:jobindex.dk "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:jobindex.dk "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
-```
-
-### Priority 4: Broader Technical / Consulting
-
-Wider net for general technical roles.
+Match her deepest domain expertise - widens beyond title matches to keyword matches.
 
 ```
-site:jobindex.dk [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:jobindex.dk "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
+bun run skills/linkedin-search/cli/src/cli.ts search -q "Head of GTM" -l "<region>" --jobage 14 --format table
+bun run skills/linkedin-search/cli/src/cli.ts search -q "EV strategy" -l "<region>" --jobage 14 --format table
+bun run skills/linkedin-search/cli/src/cli.ts search -q "sustainability strategy director" -l "<region>" --jobage 14 --format table
+site:linkedin.com/jobs "AI GTM" OR "AI-enabled go-to-market" strategy <region>
+site:linkedin.com/jobs "corporate development" automotive OR mobility OR publishing <region>
+```
+
+### Priority 3: Adjacent Roles
+
+Roles she could pivot into that use the same skill set.
+
+```
+bun run skills/linkedin-search/cli/src/cli.ts search -q "Head of Corporate Development" -l "<region>" --jobage 14 --format table
+bun run skills/linkedin-search/cli/src/cli.ts search -q "General Manager" -l "<region>" --jobage 14 --format table
+bun run skills/linkedin-search/cli/src/cli.ts search -q "Country Manager" -l "<region>" --jobage 14 --format table
+bun run skills/linkedin-search/cli/src/cli.ts search -q "Head of Transformation" -l "<region>" --jobage 14 --format table
+```
+
+### Priority 4: Broader Net (Strategy Consulting)
+
+Wider net - senior consulting/advisory roles that keep the door open to future ownership tracks.
+
+```
+bun run skills/linkedin-search/cli/src/cli.ts search -q "Principal" strategy consulting -l "<region>" --jobage 14 --format table
+bun run skills/linkedin-search/cli/src/cli.ts search -q "Strategic Advisor" -l "<region>" --jobage 14 --format table
+site:linkedin.com/jobs "special projects" OR "chief of staff" AI OR mobility OR sustainability <region>
 ```
 
 ## Location Filter
 
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
-- [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+Sector-agnostic, multi-region search. Substitute `<region>` above with each of:
+- **Ideal (home base, no relocation):** "Hong Kong", "Beijing, China"
+- **Acceptable (open to relocation):** "Singapore", "London, United Kingdom", "Paris, France", "Berlin, Germany", "Sydney, Australia", "Remote"
+- **Borderline:** other US/EU hubs not listed above - include if the role is otherwise a strong fit, flag visa/relocation complexity in the evaluation
+- **Too far / excluded:** none by geography alone, but see the deal-breaker below
+
+**Deal-breaker independent of geography:** flag any role that is structurally isolated from the decision-making centre (e.g., a satellite office with no path to leadership access), per `04-job-evaluation.md`. This applies even to postings physically inside the "ideal" or "acceptable" tiers above.
+
+## Compensation Baseline
+
+Negotiable; minimum ~HKD 1,000,000 base plus bonus and a relocation package for roles outside her current city. Use this only as a soft screen - do not reject a strong-fit role over compensation before discussing with Ada.
 
 ## Date Filter
 
@@ -73,4 +85,5 @@ Only include jobs posted within the last 14 days, or with an application deadlin
 ## Adapting Queries
 
 If the user specifies a focus area, select queries from the matching category and also generate 2-3 custom queries for that focus. For example:
-- "/scrape [focus_area]" -> relevant category queries + custom focus-specific queries
+- "/scrape sustainability" -> Priority 2 queries + custom sustainability-strategy queries
+- "/scrape broad" -> run all four priority categories across all regions

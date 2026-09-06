@@ -105,12 +105,11 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Strategy & Transformation / GTM Leadership roles:**
+> Strategy and transformation leader with 14 years bridging global roadmaps to regional execution across consulting, global automotive, and AI-driven knowledge businesses. Proven in leading $180M+ commercial portfolios, advising the C-suite, and running cross-border GTM at scale, with a track record of translating ambiguous mandates into measurable commercial and operational outcomes.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For General Management / Chief of Staff roles:**
+> Cross-border strategy and operations leader with a 14-year track record advising CEOs and executive committees across automotive, consulting, and AI-driven knowledge sectors. Skilled at converting board-level strategy into executable, cross-functional delivery, with direct experience managing multi-market commercial portfolios exceeding $180M.
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.

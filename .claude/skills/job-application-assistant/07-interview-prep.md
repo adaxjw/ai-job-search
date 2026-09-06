@@ -10,28 +10,59 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 ## Ready-Made STAR Examples
 
-<!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
+Populated from CV/LinkedIn via `/setup` Path A. These are stubs, not full examples — fill in the Situation/Task/Action/Result details from your own memory of each engagement before using them in an interview.
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+## STAR Candidates (Complete Manually)
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 37% Cost Optimization (Corporate Strategy, VW Group China)
+**Source:** CV/LinkedIn — Senior Manager, Corporate Strategy, Volkswagen Group China (2022–2024)
+**What happened:** Delivered 37% cost optimization through commercial and operational initiatives.
+**Why it matters:** Strong answer for "tell me about a time you drove measurable financial impact" or "describe a cost/efficiency initiative you led."
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### China Sustainability Strategy Design (VW Group China)
+**Source:** CV/LinkedIn — Senior Manager, Corporate Strategy, Volkswagen Group China (2022–2024)
+**What happened:** Led the first China Sustainability Strategy, linking decarbonization, circular economy, and impact investment to measurable outcomes.
+**Why it matters:** Strong answer for "tell me about a 0-to-1 initiative you built" or "describe a time you had to design something with no existing playbook."
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Elsevier AI-Assisted Workspace GTM Launch
+**Source:** CV/LinkedIn — Senior Manager, Strategy & GTM, RELX Group/Elsevier (2025–present)
+**What happened:** Led Elsevier's largest AI-assisted workspace GTM launch in the region.
+**Why it matters:** Strong answer for "describe your experience with AI-enabled products" or "tell me about launching something at scale."
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### China Innovation Incubator (Audi AG)
+**Source:** CV/LinkedIn — Manager, Product Strategy & Portfolio, Audi AG (2020–2022)
+**What happened:** Built the China Innovation Incubator, scaling 15 concepts toward commercialization.
+**Why it matters:** Strong answer for "tell me about building a program from scratch" or "describe how you managed a portfolio of early-stage initiatives."
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### $10M Client Portfolio & Mentoring 20+ Consultants (EY)
+**Source:** CV/LinkedIn — Engagement Manager, Strategy, EY Consulting (2013–2018)
+**What happened:** Managed a ~$10M client revenue portfolio while mentoring 20+ consultants, consistently rated top performer.
+**Why it matters:** Strong answer for "tell me about managing client relationships under commercial pressure" or "describe your approach to mentoring/developing others."
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 

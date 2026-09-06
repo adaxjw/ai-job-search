@@ -5,7 +5,9 @@
       "Bash(python3:*)",
       "Bash(python:*)",
       "Bash(curl:*)",
-      "Bash(bun:*)"
+      "Bash(bun:*)",
+      "Bash(mkdir -p /home/user/ai-job-search/documents/cv)",
+      "Bash(cp \"/root/.claude/uploads/b2ff036f-8fe0-5bf7-ab9d-2fb9d8359d82/4561d387-CV_Ada_WANG_2026_HK.pdf\" /home/user/ai-job-search/documents/cv/CV_Ada_WANG_2026_HK.pdf)"
     ]
   }
 }
